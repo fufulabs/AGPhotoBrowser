@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+AFNetworking.h"
 
 @class AGPhotoBrowserZoomableView;
 
@@ -23,5 +24,6 @@
 @property (nonatomic, strong, readonly) UIImageView *imageView;
 
 - (void)setImage:(UIImage *)image;
+- (void)setImageWithUrl:(NSURL *)url;
 
 @end

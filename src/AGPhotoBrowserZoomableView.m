@@ -21,7 +21,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-		self.translatesAutoresizingMaskIntoConstraints = NO;
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.delegate = self;
         self.imageView = [[UIImageView alloc] initWithFrame:frame];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -46,6 +46,10 @@
 - (void)setImage:(UIImage *)image
 {
     self.imageView.image = image;
+}
+
+- (void)setImageWithUrl:(NSURL *)url {
+  [self.imageView setImageWithURL:url];
 }
 
 

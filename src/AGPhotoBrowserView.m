@@ -323,6 +323,7 @@ const NSInteger AGPhotoBrowserThresholdToCenter = 150;
 							 self.displayingDetailedView = YES;
 							 self.photoTableView.alpha = 1.;
 							 [self.photoTableView reloadData];
+                             [self.overlayView resetOverlayView];
 						 }
 					 }];
 }

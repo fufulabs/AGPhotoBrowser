@@ -349,12 +349,13 @@ const NSInteger AGPhotoBrowserThresholdToCenter = 150;
                          [self.previousWindow makeKeyAndVisible];
                          self.currentWindow.hidden = YES;
                          self.currentWindow = nil;
+             if ([_delegate respondsToSelector:@selector(willDismissPhotoBrowser:)])
+               [_delegate willDismissPhotoBrowser:self];
 						 if(completionBlock) {
 							 completionBlock(finished);
 						 }
 					 }];
 }
-
 
 #pragma mark - AGPhotoBrowserOverlayViewDelegate
 
